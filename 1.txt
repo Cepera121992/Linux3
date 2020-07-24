@@ -1,0 +1,23 @@
+ubuntu@ip-172-31-47-169:~$ touch hello.py
+ubuntu@ip-172-31-47-169:~$ nano hello.py
+ubuntu@ip-172-31-47-169:~$ su user_new
+Password:
+$ exit
+ubuntu@ip-172-31-47-169:~$ ls -l hello.py
+-rw-rw-r-- 1 ubuntu ubuntu 23 Jul 24 16:49 hello.py
+ubuntu@ip-172-31-47-169:~$ sudo chown user_new hello.py
+ubuntu@ip-172-31-47-169:~$ su user_new
+Password:
+$ vim hello.py
+$ exit
+ubuntu@ip-172-31-47-169:~$ sudo chown ubuntu hello.py
+ubuntu@ip-172-31-47-169:~$ chmod o+rw hello.py
+ubuntu@ip-172-31-47-169:~$ su user_new
+Password:
+$ vim hello.py
+user_new@ip-172-31-47-169:/home/ubuntu$ exit
+exit
+ubuntu@ip-172-31-47-169:~$ vim task.py
+ubuntu@ip-172-31-47-169:~$ sudo chown task.py user_new
+chown: invalid user: ‘task.py’
+ubuntu@ip-172-31-47-169:~$ sudo chown user_new task.py
